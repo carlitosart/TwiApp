@@ -1,6 +1,7 @@
 package bo.ucbx.twiapp.dao;
 
 import bo.ucbx.twiapp.entities.TweetsEntity;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -8,6 +9,7 @@ import java.util.List;
 
 public interface TweetsRepository extends JpaRepository<TweetsEntity, Integer> {
 
+    @Cacheable("timeline")
     @Query(
             value = "SELECT t.*\n" +
                     "FROM tweets t\n" +
