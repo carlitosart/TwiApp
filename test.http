@@ -1,0 +1,49 @@
+
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userName": "Anita1"
+}
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userName": "Anita2"
+}
+###
+POST http://localhost:8080/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userName": "Anita3"
+}
+###CREACION TUITE
+POST http://localhost:8080/api/tweet
+Content-Type: application/json
+
+{
+  "tweetText": "Hola Mundo",
+  "userId": 2
+
+}
+
+
+###FOLLOWING
+POST http://localhost:8080/api/follows
+Content-Type: application/json
+
+{
+  "userFollowerId": 3,
+  "userFolloweeId": 2
+
+}
+
+###TIME LINE
+GET http://localhost:8080/api/users/timeline/3
+Accept: application/json
