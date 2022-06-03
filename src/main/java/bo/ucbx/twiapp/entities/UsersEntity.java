@@ -1,11 +1,12 @@
 package bo.ucbx.twiapp.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "users", schema = "twiapp", catalog = "")
-public class UsersEntity {
+public class UsersEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "user_id", nullable = false)

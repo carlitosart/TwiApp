@@ -1,11 +1,12 @@
 package bo.ucbx.twiapp.entities;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "tweets", schema = "twiapp", catalog = "")
-public class TweetsEntity {
+public class TweetsEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "tweet_id", nullable = false)
